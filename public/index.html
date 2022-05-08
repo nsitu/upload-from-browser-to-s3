@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- adapted from  https://github.com/Sam-Meech-Ward/s3-direct-upload -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <!-- Base 64 inline favicon generated at https://png-pixel.com/ -->
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNMPvnxPwAG0gMeEo1rnwAAAABJRU5ErkJggg==">
+
+  <title>Upload to S3</title>
+</head>
+<body>
+  
+  <form id="imageForm">
+    <h1>Upload to S3</h1>
+    <p>Send video files securely to an S3 bucket for processing.</p>
+    <hr/>
+    <input id="imageInput" type="file" accept="video/*">
+    <button type="submit">Upload</button>
+    
+    <section id="uploadProgress">
+        <div id="progressBar">
+            <div id="progressIndicator"></div>
+            <div id="progressPercent"></div>
+        </div>
+        <div id="progressDetails"></div>
+    </section>
+
+    <section id="result">
+        <h4>Result:</h4>
+
+    </section>
+    
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

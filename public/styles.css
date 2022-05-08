@@ -1,0 +1,52 @@
+body{
+    font-family: sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+  
+  form > * {
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
+  #uploadProgress{
+      display: none;
+  }
+  #progressBar{
+      height: 2rem;
+      width: 100%;
+      position: relative; 
+      border-radius: 10px;
+      background: rgb(234, 243, 234);
+  }
+
+  #progressIndicator{
+      height: 100%;
+      background: green;
+      width: 0px;
+      border-radius: 10px;
+  }
+
+  #progressPercent{
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      top: 25%; 
+      text-align: center;
+      color: rgb(126, 206, 126) 
+  }
+  #progressDetails{
+    text-align: center;
+  }
+
+  #result{
+      display:none;
+  }
+  #result a{
+    word-break: break-all;
+  }
+

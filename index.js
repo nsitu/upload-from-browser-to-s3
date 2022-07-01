@@ -1,6 +1,8 @@
 import express from 'express'
 import { generateUploadURL } from './s3.js'
 
+const PORT = process.env.PORT || 5000
+
 const app = express()
 
 app.use(express.static('public'))
@@ -10,4 +12,4 @@ app.get('/s3Url', async (req, res) => {
   res.send({url})
 })
 
-app.listen(8080, () => console.log("listening on port 8080"))
+app.listen(PORT, () => console.log("listening on port 8080"))
